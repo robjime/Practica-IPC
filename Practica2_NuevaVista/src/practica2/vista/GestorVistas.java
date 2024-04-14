@@ -18,7 +18,7 @@ public class GestorVistas {
             vistaActual.setVisible(false);
             vistaActual.dispose();
         }
-        vistaActual = new VistaMenuPrincipal2();
+        vistaActual = new VistaMenuPrincipal();
         vistaActual.setVisible(true);
     }
     
@@ -27,9 +27,8 @@ public class GestorVistas {
             vistaActual.setVisible(false);
             vistaActual.dispose();
         }
-        vistaActual = new VistaMisViajes2();
-        vistaActual.setVisible(true);
-        
+        vistaActual = new VistaMisViajes();
+        vistaActual.setVisible(true); 
     }
     
     public void mostrarRecargaTarjeta(){
@@ -37,9 +36,8 @@ public class GestorVistas {
             vistaActual.setVisible(false);
             vistaActual.dispose();
         }
-        vistaActual = new VistaRecargaTarjeta2();
+        vistaActual = new VistaRecargaTarjeta();
         vistaActual.setVisible(true);
-       
     }
     
     public void mostrarMenuUsuario(){
@@ -47,8 +45,43 @@ public class GestorVistas {
             vistaActual.setVisible(false);
             vistaActual.dispose();
         }
-        vistaActual = new MenuUsuario2();
+        vistaActual = new MenuUsuario();
+        vistaActual.setVisible(true);      
+    }
+    
+    public void mostrarCompraBillete(){
+        if(vistaActual != null){
+            vistaActual.setVisible(false);
+            vistaActual.dispose();
+        }
+        vistaActual = new VistaCompraBillete();
         vistaActual.setVisible(true);
-        
+    }
+    
+    public void mostrarElegirViaje(){
+        if(vistaActual != null){
+            vistaActual.setVisible(false);
+            vistaActual.dispose();
+        }
+        vistaActual = new VistaElegirViaje();
+        vistaActual.setVisible(true);
+    }
+  
+    public void mostrarEditarViaje(){
+        if(vistaActual != null){
+            vistaActual.setVisible(false);
+            vistaActual.dispose();
+        }
+        vistaActual = new VistaEditarViaje();
+        vistaActual.setVisible(true);
+    }
+    
+    public void mostrarPagoBillete(){
+        if(vistaActual != null){
+            vistaActual.setVisible(false);
+            vistaActual.dispose();
+        }
+        vistaActual = new VistaPagoBillete();
+        vistaActual.setVisible(true);
     }
 }

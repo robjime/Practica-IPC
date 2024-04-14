@@ -12,9 +12,9 @@ import practica2_nuevavista.main;
  */
 public class ControladorMenuUsuario {
     private GestorVistas gestor;
-    private MenuUsuario2 vista;
+    private MenuUsuario vista;
     
-    public ControladorMenuUsuario(MenuUsuario2 vista){
+    public ControladorMenuUsuario(MenuUsuario vista){
         this.vista = vista;
     }
     

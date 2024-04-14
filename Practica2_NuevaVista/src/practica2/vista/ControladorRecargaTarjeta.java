@@ -12,9 +12,9 @@ import practica2_nuevavista.main;
  */
 public class ControladorRecargaTarjeta {
     private GestorVistas gestor;
-    private VistaRecargaTarjeta2 vista;
+    private VistaRecargaTarjeta vista;
     
-    public ControladorRecargaTarjeta (VistaRecargaTarjeta2 vista){
+    public ControladorRecargaTarjeta (VistaRecargaTarjeta vista){
         this.vista = vista;
     }
     
@@ -24,5 +24,12 @@ public class ControladorRecargaTarjeta {
     
     public void volverMenuPrincipal(){ //acción para volver al menú principal
         main.getGestorVistas().mostrarMenuPrincipal();
+    }
+    
+    public void ComprobarPassword(char [] contraseña){ //funcion para comprobar si la contraseña introducida es la correcta
+        String str_contraseña = String.valueOf(contraseña);
+        if(str_contraseña.equals("1234")){
+            main.getGestorVistas().mostrarMenuPrincipal();
+        }
     }
 }

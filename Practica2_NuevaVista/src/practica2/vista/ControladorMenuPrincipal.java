@@ -15,9 +15,9 @@ import practica2_nuevavista.main;
 public class ControladorMenuPrincipal {
     private Modelo modelo;
     private GestorVistas gestor;
-    private VistaMenuPrincipal2 vista;
+    private VistaMenuPrincipal vista;
     
-    public ControladorMenuPrincipal(VistaMenuPrincipal2 vista){
+    public ControladorMenuPrincipal(VistaMenuPrincipal vista){
         this.vista = vista;
     }
     
@@ -26,6 +26,6 @@ public class ControladorMenuPrincipal {
     }
     
     public void comprarBillete(){
-        main.getGestorVistas().mostrarMenuUsuario();
+        main.getGestorVistas().mostrarCompraBillete();
     }
 }
