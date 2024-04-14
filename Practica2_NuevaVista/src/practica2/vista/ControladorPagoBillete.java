@@ -19,13 +19,13 @@ public class ControladorPagoBillete {
     }
    
     public void pasoAnterior(){
-        main.getGestorVistas().mostrarElegirViaje();
+        main.getGestorVistas().mostrarElegirViaje(); //vuelta al paso anterior
     }
     
     public void volverMenuPrincipal(char[] PIN){
         String pin = String.valueOf(PIN);
         if(pin.equals("1234")){ //vuelve al menú principal y ejecuta el pago si la contraseña es correcta
-            main.getGestorVistas().mostrarMenuPrincipal();
+            main.getGestorVistas().mostrarMenuPrincipal(); 
         }
     }
 }
