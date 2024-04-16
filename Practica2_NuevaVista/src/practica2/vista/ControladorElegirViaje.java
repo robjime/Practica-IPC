@@ -11,7 +11,6 @@ import practica2_nuevavista.main;
  * @author jorgy
  */
 public class ControladorElegirViaje {
-    public GestorVistas gestor;
     public VistaElegirViaje vista;
     
     public ControladorElegirViaje (VistaElegirViaje vista){

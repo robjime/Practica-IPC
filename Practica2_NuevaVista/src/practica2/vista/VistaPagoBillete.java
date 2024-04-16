@@ -17,7 +17,7 @@ public class VistaPagoBillete extends javax.swing.JFrame {
     public VistaPagoBillete() {
         initComponents();
         controladorPB = new ControladorPagoBillete(this);
-        PagoTCYL.setVisible(false);
+        PanelTCYL.setVisible(false);
         PanelTarjeta.setVisible(false);
     }
     
@@ -37,7 +37,9 @@ public class VistaPagoBillete extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
         PanelTCYL = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         PagoTCYL = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
         PanelTarjeta = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
@@ -45,7 +47,6 @@ public class VistaPagoBillete extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(612, 420));
-        setPreferredSize(new java.awt.Dimension(612, 420));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel1.setMinimumSize(new java.awt.Dimension(612, 420));
@@ -81,6 +82,8 @@ public class VistaPagoBillete extends javax.swing.JFrame {
 
         PanelTCYL.setPreferredSize(new java.awt.Dimension(221, 232));
 
+        jLabel3.setText("Saldo Actual:");
+
         PagoTCYL.setText("jButton3");
         PagoTCYL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,21 +91,32 @@ public class VistaPagoBillete extends javax.swing.JFrame {
             }
         });
 
+        jTextField2.setEditable(false);
+
         javax.swing.GroupLayout PanelTCYLLayout = new javax.swing.GroupLayout(PanelTCYL);
         PanelTCYL.setLayout(PanelTCYLLayout);
         PanelTCYLLayout.setHorizontalGroup(
             PanelTCYLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelTCYLLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PagoTCYL, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addGroup(PanelTCYLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PagoTCYL, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PanelTCYLLayout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         PanelTCYLLayout.setVerticalGroup(
             PanelTCYLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelTCYLLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(PagoTCYL, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(PanelTCYLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(PagoTCYL, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jPanel2.add(PanelTCYL);
@@ -128,13 +142,13 @@ public class VistaPagoBillete extends javax.swing.JFrame {
         PanelTarjeta.setLayout(PanelTarjetaLayout);
         PanelTarjetaLayout.setHorizontalGroup(
             PanelTarjetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelTarjetaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PanelTarjetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelTarjetaLayout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addGroup(PanelTarjetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPasswordField1))
-                .addContainerGap())
+                    .addComponent(jPasswordField1)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
         PanelTarjetaLayout.setVerticalGroup(
             PanelTarjetaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,13 +211,13 @@ public class VistaPagoBillete extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        PagoTCYL.setVisible(true);
+        PanelTCYL.setVisible(true);
         PanelTarjeta.setVisible(false);
-         jRadioButton2.setSelected(false);
+        jRadioButton2.setSelected(false);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        PagoTCYL.setVisible(false);
+        PanelTCYL.setVisible(false);
         PanelTarjeta.setVisible(true);
         jRadioButton1.setSelected(false);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
@@ -268,10 +282,12 @@ public class VistaPagoBillete extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
